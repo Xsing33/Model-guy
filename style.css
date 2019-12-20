@@ -4,7 +4,7 @@
 /* Global */
 
 * {
-  margin: 0;
+  margin: 1rem;
   padding: 0;
   box-sizing: border-box;
 }
@@ -14,92 +14,74 @@ html {
   color: whitesmoke;
   background-color: grey;
   height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-
 /* Header */
-
 header {
   display: flex;
-  position: absolute;
-  width: 100%;
-  height: 10%;
-  margin: 20px;
-  padding: 20px 20px;
-}
-
-nav {
-  margin-left: 300px;
-}
-
-nav li {
-  display: inline-flex;
-  margin: 20px 50px;
-}
-
-nav li a {
-  list-style: none;
-  text-decoration: none;
-
-  color: black;
+  justify-content: space-between;
+  margin: 3rem;
 }
 
 h1 {
-  font-weight: 900;
-  font-size: 5rem;
   text-transform: uppercase;
+  font-size: 4rem;
 }
-/* Hover Effects */
 
-h1:hover {
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 2rem;
   color: black;
 }
 
-nav li a:hover {
-  color: white;
+nav a:hover {
+  color: bisque;
 }
 
+/* Container */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas:
-    "Header Header Header"
-    "Body Body-2 body-3"
-    "Footer-1 Footer-2 Footer-3";
-  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem;
 }
 
-h2:hover {
-  color: black;
-}
-
+/* side 1 */
 .side-1 {
-  margin-top: 100px;
-  grid-area: Body;
-  padding: 20px 00px;
+  grid-column: 1 / 2;
 }
-.side-1 h2 {
+h2 {
   font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  position: relative;
-  top: -200px;
-  left: 30px;
 }
 
-.side-1 p {
-  grid-area: body-2;
+p {
+  line-height: 2.5;
 }
 
+/* side 2 */
 .side-2 {
-  grid-area: footer-3;
-  position: relative;
-  right: 500px;
-  bottom: 650px;
+  grid-column: 2 / 3;
 }
 
 img {
-  height: 700px;
-  width: 700px;
+  height: 500px;
+  width: auto;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  margin: 3rem;
+  justify-content: space-between;
+}
+
+i:hover {
+  color: black;
 }
